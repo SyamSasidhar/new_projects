@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Price Cards</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #007bff; /* Blue background */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      gap: 20px;
+      width: 90%;
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #222;
+    }
+
+    /* Accent colors */
+    .card.gold { border-left: 6px solid gold; }
+    .card.silver { border-left: 6px solid silver; }
+    .card.usd { border-left: 6px solid #28a745; }
+    .card.gbp { border-left: 6px solid #007bff; }
+  </style>
+</head>
+<body>
+
+  <header>
+    Live Prices Dashboard
+  </header>
+
+  <div class="container">
+    <div class="card gold">
+      <h2>Gold Price</h2>
+      <p>₹9,513 / g</p>
+    </div>
+    <div class="card silver">
+      <h2>Silver Price</h2>
+      <p>₹75 / g</p>
+    </div>
+    <div class="card usd">
+      <h2>USD to INR</h2>
+      <p>₹83.20 / USD</p>
+    </div>
+    <div class="card gbp">
+      <h2>Pound to INR</h2>
+      <p>₹103.501 / Pound</p>
+    </div>
+  </div>
+
+</body>
+</html>
